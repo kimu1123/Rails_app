@@ -6,6 +6,5 @@ class LessonsController < ApplicationController
     
   def call
     @call = "callアクションが実行されています"
-
   end
 end
