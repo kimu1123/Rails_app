@@ -1,0 +1,91 @@
+.headline{
+    text-align : center;
+    background-color:#000080;
+    color:#FFFFFF;
+    padding-top:10px;
+    padding-bottom:10px;
+    margin-top:-10px;
+}
+
+h3{
+position:relative;
+top:15px;
+margin-left :70px;
+margin-top :30px;
+font-size :20px;
+}
+
+a{
+color :#0000FF;
+font-size :100%;
+}
+
+.nav-link{
+  border :2px ridge #0000FF;
+border-radius: 9px;
+margin-top :30px;
+position:relative;
+bottom :40px;
+margin-right: 650px;
+margin-left :600px;
+padding :10px  50px  10px ;
+left :400px;
+background-color: #CCFFFF ;
+}
+ 
+table {
+    position: relative;
+    left:80px;
+    border: 2px ridge #aaa;
+    padding :0px 100px;
+}
+
+table th {
+ margin-right :100px ;
+ padding-right :100px;
+ 
+  }
+
+  table td {
+    background-color: #f9ecd5;
+    padding: 10px 20px;
+  }
+
+  .notice {
+    background-color: #ccf;
+    padding: 10px;
+    position: relative;
+    bottom :50px;
+  }
+
+  .btn_save{
+background-color:#0000FF;
+color :#FFFFFF;
+border-radius: 10px;
+margin :5px;
+padding:10px;
+position: relative;
+left :850px;
+
+  }
+
+  .btn{
+    border :2px ridge #FFFFFF;
+    border-radius: 9px;
+    padding :15px;
+    left :750px;
+    position: relative;
+    bottom :60px;
+    color :#000000;
+  }
+  
+
+  .click{
+color :#0000FF;
+  }
+
+  .back{
+    color: #0000FF;
+    position: relative;
+    left :100px;
+  }

@@ -1,0 +1,61 @@
+
+<header>
+ <div class = "headline">
+ <h2> スケジュール管理アプリ</h2>
+</header>
+
+<h3>予約一覧</h3>
+
+<% if flash[:notice] %>
+   <p class="notice"><%= flash[:notice] %></p>
+ <% end %>
+
+
+ <p> <%= link_to "新規登録", :new_plan , class: "nav-link" %> </p>
+ </div>
+
+<table>
+   <thead>
+     <tr>
+       <th>id</th>
+       <th>タイトル</th>
+       <th>開始日</th>
+       <th>終了日</th>
+       <th>終日</th>
+       <th>更新日時</th>
+     </tr>
+   </thead>
+
+   <tbody>
+   <% @plans.each do |plan| %>
+     <tr>
+       <td><%= plan.id %></td>
+       <td><%= plan. title %></td>
+       <td><%= plan. start_date.to_s(:date_jp)%></td> 
+       <td><%= plan.  end_date.to_s(:date_jp) %></td> 
+       <td><% if plan.is_all_day == true %>
+       ○
+       <% end %>
+       </td>
+       <td><%=plan.updated_at.to_s(:datetime_jp) %></td>
+       <td>
+       <%= link_to "詳細", plan %>
+     </td>
+     <td>
+       <%= link_to "編集", [:edit, plan] %>
+     </td>
+     <td>
+     <%= link_to " 削除", plan , method: :delete, data: { confirm: '本当に削除して良いですか?',
+     cancel: 'やめる',
+     commit: '削除する'},  title: '削除確認' %>
+     </tr>
+   <% end %>
+ </tbody>
+</table>
+
+<div class = "info" >
+  <%= "合計予定数：#{@plans.count}件" %>
+   現在の日時：<%= Date.current.strftime("%Y/%m/%d ") %>
+ </div>
+</div>
+

@@ -1,0 +1,30 @@
+<p><%= link_to "ユーザー情報一覧に戻る", :plans , class: "back"%></p>
+<div>
+  <ul>
+    <li><%= link_to "予定一覧へ",:plans %></li>
+    <li><%= link_to "編集へ",[:edit, @plan] %></li>
+
+    
+  <ul>
+</div>
+
+<table>
+   <tr>
+     <th>開始日</th>
+     <td><%= @plan.start_date %></td>
+   </tr>
+   <tr>
+     <th>終了日</th>
+     <td><%= @plan.end_date %></td>
+   </tr>
+   <tr>
+     <th>終日</th>
+     <td><%if @plan.is_all_day == true %>
+       ○
+       <% end %>
+   </tr>
+   <tr>
+     <th>スケジュールメモ</th>
+     <td><%= @plan.sche_memo %></td>
+   </tr>
+ </table>
